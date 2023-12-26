@@ -1,0 +1,63 @@
+### 111
+POST http://localhost:8080/api/auth/sign-up
+Content-Type: application/json
+
+{
+  "name" : "name",
+  "surname" : "surname1",
+  "email" : "email1",
+  "username": "username",
+  "password": "password"
+}
+
+###
+# sign-up test
+POST http://localhost:8080/auth/sign-up
+Content-Type: application/json
+
+{
+  "name" : "name",
+  "surname" : "surname",
+  "email" : "email",
+  "username": "username",
+  "password": "password"
+}
+
+###
+
+DELETE http://localhost:8080/api/tasks/12
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VybmFtZSIsImlhdCI6MTcwMzU1MzkwNiwiZXhwIjoxNzAzNTg5OTA2fQ.IkTsq98m73pD5ibWV_7_pB80avvR-81ZnUDB8kw1nFU
+
+###
+
+#sign-in test
+POST http://localhost:8080/auth/sign-in
+Content-Type: application/json
+
+{
+  "username": "username",
+  "password": "password"
+}
+
+###
+
+#project create test
+POST http://localhost:8080/projects
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VybmFtZSIsImlhdCI6MTcwMzUxNTgzNCwiZXhwIjoxNzAzNTUxODM0fQ.3lklPQBfusxa8o5XaELVy6B9dzq_jH4543svTUuuMYw
+Content-Type: application/json
+
+{
+  "name" : "name"
+}
+
+###
+
+#project get by id create test
+GET http://localhost:8080/api/projects/my/collaborative
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VybmFtZSIsImlhdCI6MTcwMzUzNDc3OCwiZXhwIjoxNzAzNTcwNzc4fQ.b43Yc8t8smEaaXrwnhJLt6Yv4LDsHM_yzNrQP80FddE
+
+
+###
+
+## get by id
+GET http://localhost:8080/api/tasks/statuses
